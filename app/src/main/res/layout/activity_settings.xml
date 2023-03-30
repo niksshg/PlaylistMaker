@@ -42,7 +42,7 @@
             android:paddingTop="12dp"
             android:text="@string/settings_daynight_string"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="@dimen/settings_textsize" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:layout_width="wrap_content"
@@ -61,7 +61,7 @@
             android:layout_gravity="start"
             android:text="@string/settings_shareapp_string"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="@dimen/settings_textsize" />
 
         <ImageButton
             android:layout_width="@dimen/settings_button"
@@ -83,7 +83,7 @@
             android:layout_gravity="start"
             android:text="@string/settings_support_string"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="@dimen/settings_textsize" />
 
         <ImageButton
             android:layout_width="@dimen/settings_button"
@@ -105,7 +105,7 @@
             android:layout_gravity="start"
             android:text="@string/user_agreement_string"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="@dimen/settings_textsize" />
 
         <ImageButton
             android:layout_width="@dimen/settings_button"
