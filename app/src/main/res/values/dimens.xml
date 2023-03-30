@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_top_margin">16dp</dimen>
+    <dimen name="main_icon_padding">12dp</dimen>
+    <dimen name="main_layout_padding">16dp</dimen>
+    <dimen name="settings_menu_padding">24dp</dimen>
+    <dimen name="settings_button">24dp</dimen>
+    <dimen name="settings_textsize">16sp</dimen>
+</resources>
