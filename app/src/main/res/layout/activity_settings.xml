@@ -43,6 +43,7 @@
             android:text="@string/settings_shareapp_string"/>
 
         <ImageButton style="@style/ImageSettingsButton"
+            android:id="@+id/shareAppButton"
             android:contentDescription="@string/shareapp_button_description"
             android:src="@drawable/shareapp_vector" />
     </FrameLayout>
@@ -54,6 +55,7 @@
             android:text="@string/settings_support_string"/>
 
         <ImageButton style="@style/ImageSettingsButton"
+            android:id="@+id/contactSupportButton"
             android:contentDescription="@string/customer_support_button_description"
             android:src="@drawable/customer_support_vector" />
     </FrameLayout>
@@ -65,6 +67,7 @@
             android:text="@string/user_agreement_string"/>
 
         <ImageButton style="@style/ImageSettingsButton"
+            android:id="@+id/UserAgreementButton"
             android:contentDescription="@string/user_agreement_button_description"
             android:src="@drawable/user_agreement_vector" />
     </FrameLayout>
