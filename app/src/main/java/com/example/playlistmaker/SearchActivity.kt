@@ -10,6 +10,10 @@ import android.widget.ImageButton
 import android.widget.ImageView
 
 class SearchActivity : AppCompatActivity() {
+    var text=""
+    companion object {
+        const val MUSIC_SEARCH = "MUSIC_SEARCH"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
@@ -18,11 +22,13 @@ class SearchActivity : AppCompatActivity() {
         val clearText = findViewById<ImageView>(R.id.clear_text)
         val backButton = findViewById<ImageButton>(R.id.back_button)
 
+        searchEdittext.setText("")
+
         backButton.setOnClickListener {
             finish()
         }
 
-        clearText.setOnClickListener{
+        clearText.setOnClickListener {
             searchEdittext.text.clear()
         }
 
@@ -36,12 +42,13 @@ class SearchActivity : AppCompatActivity() {
                 clearText.visibility = clearButtonVisibility(s)
             }
 
-                override fun afterTextChanged(s: Editable?) {
-                    // empty
-                }
+            override fun afterTextChanged(s: Editable?) {
+                // empty
+                text = searchEdittext.text.toString()
             }
-        searchEdittext.addTextChangedListener(simpleTextWatcher)
         }
+        searchEdittext.addTextChangedListener(simpleTextWatcher)
+    }
 
     private fun clearButtonVisibility(s: CharSequence?): Int {
         return if (s.isNullOrEmpty()) {
@@ -51,4 +58,14 @@ class SearchActivity : AppCompatActivity() {
         }
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(MUSIC_SEARCH,text)
     }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        text = savedInstanceState.getString(MUSIC_SEARCH,"")
+    }
+
+}

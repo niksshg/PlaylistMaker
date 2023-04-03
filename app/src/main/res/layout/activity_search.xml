@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_marginTop="48dp">
-    <EditText
+    <EditText style="@style/searchEditText"
         android:id="@+id/search_edittext"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,13 +27,10 @@
         android:hint="@string/search_field_string"
         android:singleLine="true"
         android:inputType="text"
-        android:textColor="@color/yp_grey"
-        android:textColorHint="@color/yp_grey"
         android:drawableStart="@drawable/search_screen_loop"
-        android:drawablePadding="6dp"
-        android:drawableTint="@color/yp_grey"/>
+        android:drawablePadding="6dp"/>
 
-        <ImageView
+        <ImageView style="@style/searchClearButton"
             android:id="@+id/clear_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

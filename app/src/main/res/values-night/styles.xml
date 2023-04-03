@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
@@ -68,5 +68,14 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="searchEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:drawableTint">@color/black</item>
+    </style>
 
+    <style name="searchClearButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:tint">@color/black</item>
+        <item name="android:background">@null</item>
+    </style>
 </resources>

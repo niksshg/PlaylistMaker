@@ -14,4 +14,8 @@
     <string name="user_agreement_button_description">Open user agreement</string>
     <string name="search_screen_title">Поиск</string>
     <string name="search_field_string">Поиск</string>
+    <string name="agreement_url">https://yandex.ru/legal/practicum_offer/</string>
+    <string name="android_course_url">https://practicum.yandex.ru/android-developer/</string>
+    <string name="contact_support_email_topic">Сообщение разработчикам и разработчицам приложения Playlist Maker</string>
+    <string name="contact_support_email_body">Спасибо разработчикам и разработчицам за крутое приложение!</string>
 </resources>
