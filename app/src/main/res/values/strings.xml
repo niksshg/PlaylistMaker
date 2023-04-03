@@ -1,15 +1,17 @@
 <resources>
     <string name="app_name">Playlist Maker</string>
     <string name="app_title">Playlist Maker</string>
-    <string name="settings_button">Настройки</string>
+    <string name="settings_screen_title">Настройки</string>
     <string name="media_button">Медиатека</string>
     <string name="search_button">Поиск</string>
     <string name="settings_daynight_string">Темная тема</string>
     <string name="settings_shareapp_string">Поделиться приложением</string>
     <string name="shareapp_button_description">Share the app</string>
-    <string name="settingsreturn_button_description">Return from settings to main screen</string>
+    <string name="return_button_description">Return from current to main screen</string>
     <string name="settings_support_string">Написать в поддержку</string>
     <string name="customer_support_button_description">Contact customer support</string>
     <string name="user_agreement_string">Пользовательское соглашение</string>
     <string name="user_agreement_button_description">Open user agreement</string>
+    <string name="search_screen_title">Поиск</string>
+    <string name="search_field_string">Поиск</string>
 </resources>
