@@ -5,7 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
-import android.widget.ImageView
+
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -23,24 +23,31 @@ class SettingsActivity : AppCompatActivity() {
             finish()
         }
 
-        shareAppButton.setOnClickListener{
+        shareAppButton.setOnClickListener {
             val shareIntent = Intent(Intent.ACTION_SEND)
             shareIntent.setType("text/plain")
             shareIntent.putExtra(Intent.EXTRA_TEXT, this.getString(R.string.android_course_url))
-            startActivity(Intent.createChooser(shareIntent,"Share"))
+            startActivity(Intent.createChooser(shareIntent, "Share"))
         }
 
-        contactSupportButton.setOnClickListener{
+        contactSupportButton.setOnClickListener {
             val supportIntent = Intent(Intent.ACTION_SENDTO)
             supportIntent.data = Uri.parse("mailto:")
             supportIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("nikshg@outlook.com"))
-            supportIntent.putExtra(Intent.EXTRA_SUBJECT,this.getString(R.string.contact_support_email_topic))
-            supportIntent.putExtra(Intent.EXTRA_TEXT, this.getString(R.string.contact_support_email_body))
+            supportIntent.putExtra(
+                Intent.EXTRA_SUBJECT,
+                this.getString(R.string.contact_support_email_topic)
+            )
+            supportIntent.putExtra(
+                Intent.EXTRA_TEXT,
+                this.getString(R.string.contact_support_email_body)
+            )
             startActivity(supportIntent)
         }
-        userAgreementButton.setOnClickListener{
+        userAgreementButton.setOnClickListener {
             val agreementUrl = "https://yandex.ru/legal/practicum_offer/"
-            val agreementIntent = Intent(Intent.ACTION_VIEW, Uri.parse(this.getString(R.string.agreement_url)))
+            val agreementIntent =
+                Intent(Intent.ACTION_VIEW, Uri.parse(this.getString(R.string.agreement_url)))
             startActivity(agreementIntent)
         }
     }

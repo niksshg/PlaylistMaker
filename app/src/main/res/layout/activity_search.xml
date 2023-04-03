@@ -6,39 +6,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageButton style="@style/ImageNavButton"
+        <ImageButton
             android:id="@+id/back_button"
-            android:contentDescription="@string/return_button_description"/>
+            style="@style/ImageNavButton"
+            android:contentDescription="@string/return_button_description" />
 
-        <TextView style="@style/TopNavTextStyle"
-            android:text="@string/search_screen_title"/>
+        <TextView
+            style="@style/TopNavTextStyle"
+            android:text="@string/search_screen_title" />
     </FrameLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_marginTop="48dp">
-    <EditText style="@style/searchEditText"
-        android:id="@+id/search_edittext"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/rounded_edittext"
-        android:fontFamily="@font/ys_display_regular"
-        android:hint="@string/search_field_string"
-        android:singleLine="true"
-        android:inputType="text"
-        android:drawableStart="@drawable/search_screen_loop"
-        android:drawablePadding="6dp"/>
 
-        <ImageView style="@style/searchClearButton"
+        <EditText
+            android:id="@+id/search_edittext"
+            style="@style/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/search_screen_loop"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/ys_display_regular"
+            android:hint="@string/search_field_string"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <ImageView
             android:id="@+id/clear_text"
+            style="@style/searchClearButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/search_edittext"
             android:layout_centerVertical="true"
             android:paddingEnd="14dp"
             android:src="@drawable/cross"
-            android:visibility="gone"/>
+            android:visibility="gone" />
     </RelativeLayout>
 
 

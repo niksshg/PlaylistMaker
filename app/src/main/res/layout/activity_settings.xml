@@ -6,57 +6,62 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageButton style="@style/ImageNavButton"
+        <ImageButton
             android:id="@+id/back_button"
-            android:contentDescription="@string/return_button_description"/>
+            style="@style/ImageNavButton"
+            android:contentDescription="@string/return_button_description" />
 
-        <TextView style="@style/TopNavTextStyle"
-            android:text="@string/settings_screen_title"/>
+        <TextView
+            style="@style/TopNavTextStyle"
+            android:text="@string/settings_screen_title" />
     </FrameLayout>
 
     <FrameLayout
         style="@style/SettingFramelayoutStyle"
         android:layout_marginTop="80dp">
 
-        <TextView style="@style/SettingsTextStyle"
-            android:text="@string/settings_daynight_string"/>
+        <TextView
+            style="@style/SettingsTextStyle"
+            android:text="@string/settings_daynight_string" />
 
-        <Switch
-            style="@style/SwitchSettingsStyle"/>
+        <Switch style="@style/SwitchSettingsStyle" />
     </FrameLayout>
 
-    <FrameLayout
-        style="@style/SettingFramelayoutStyle">
+    <FrameLayout style="@style/SettingFramelayoutStyle">
 
-        <TextView style="@style/SettingsTextStyle"
-            android:text="@string/settings_shareapp_string"/>
+        <TextView
+            style="@style/SettingsTextStyle"
+            android:text="@string/settings_shareapp_string" />
 
-        <ImageButton style="@style/ImageSettingsButton"
+        <ImageButton
             android:id="@+id/shareAppButton"
+            style="@style/ImageSettingsButton"
             android:contentDescription="@string/shareapp_button_description"
             android:src="@drawable/shareapp_vector" />
     </FrameLayout>
 
-    <FrameLayout
-        style="@style/SettingFramelayoutStyle">
+    <FrameLayout style="@style/SettingFramelayoutStyle">
 
-        <TextView style="@style/SettingsTextStyle"
-            android:text="@string/settings_support_string"/>
+        <TextView
+            style="@style/SettingsTextStyle"
+            android:text="@string/settings_support_string" />
 
-        <ImageButton style="@style/ImageSettingsButton"
+        <ImageButton
             android:id="@+id/contactSupportButton"
+            style="@style/ImageSettingsButton"
             android:contentDescription="@string/customer_support_button_description"
             android:src="@drawable/customer_support_vector" />
     </FrameLayout>
 
-    <FrameLayout
-        style="@style/SettingFramelayoutStyle">
+    <FrameLayout style="@style/SettingFramelayoutStyle">
 
-        <TextView style="@style/SettingsTextStyle"
-            android:text="@string/user_agreement_string"/>
+        <TextView
+            style="@style/SettingsTextStyle"
+            android:text="@string/user_agreement_string" />
 
-        <ImageButton style="@style/ImageSettingsButton"
+        <ImageButton
             android:id="@+id/UserAgreementButton"
+            style="@style/ImageSettingsButton"
             android:contentDescription="@string/user_agreement_button_description"
             android:src="@drawable/user_agreement_vector" />
     </FrameLayout>

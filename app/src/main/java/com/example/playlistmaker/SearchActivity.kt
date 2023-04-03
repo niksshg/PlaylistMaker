@@ -10,10 +10,12 @@ import android.widget.ImageButton
 import android.widget.ImageView
 
 class SearchActivity : AppCompatActivity() {
-    var text=""
+    var text = ""
+
     companion object {
         const val MUSIC_SEARCH = "MUSIC_SEARCH"
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
@@ -60,12 +62,12 @@ class SearchActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString(MUSIC_SEARCH,text)
+        outState.putString(MUSIC_SEARCH, text)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        text = savedInstanceState.getString(MUSIC_SEARCH,"")
+        text = savedInstanceState.getString(MUSIC_SEARCH, "")
     }
 
 }
