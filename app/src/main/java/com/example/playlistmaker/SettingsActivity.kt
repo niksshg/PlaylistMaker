@@ -13,15 +13,9 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_settings)
 
         val backButton = findViewById<ImageButton>(R.id.back_button)
-        //Вариант для реализации через кнопки
-//        val shareAppButton = findViewById<ImageButton>(R.id.shareAppButton)
-//        val contactSupportButton = findViewById<ImageButton>(R.id.contactSupportButton)
-//        val userAgreementButton = findViewById<ImageButton>(R.id.UserAgreementButton)
-
         val shareAppLayout = findViewById<FrameLayout>(R.id.shareAppLayout)
         val contactSupportLayout = findViewById<FrameLayout>(R.id.contactSupportLayout)
         val userAgreementLayout = findViewById<FrameLayout>(R.id.userAgreementLayout)
-
 
         backButton.setOnClickListener {
             finish()

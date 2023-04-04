@@ -22,7 +22,6 @@ class SearchActivity : AppCompatActivity() {
 
         searchEditText.setText(text)
 
-
         backButton.setOnClickListener {
             finish()
         }
@@ -30,7 +29,6 @@ class SearchActivity : AppCompatActivity() {
         clearText.setOnClickListener {
             searchEditText.text.clear()
         }
-
 
         val simpleTextWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
