@@ -1,6 +1,5 @@
 package com.example.playlistmaker
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -8,30 +7,28 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 
 class SearchActivity : AppCompatActivity() {
-    var text = ""
-
-    companion object {
-        const val MUSIC_SEARCH = "MUSIC_SEARCH"
-    }
+    private var text = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        val searchEdittext = findViewById<EditText>(R.id.search_edittext)
+        val searchEditText = findViewById<EditText>(R.id.search_edittext)
         val clearText = findViewById<ImageView>(R.id.clear_text)
         val backButton = findViewById<ImageButton>(R.id.back_button)
 
-        searchEdittext.setText("")
+        searchEditText.setText(text)
+
 
         backButton.setOnClickListener {
             finish()
         }
 
         clearText.setOnClickListener {
-            searchEdittext.text.clear()
+            searchEditText.text.clear()
         }
 
 
@@ -46,10 +43,10 @@ class SearchActivity : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable?) {
                 // empty
-                text = searchEdittext.text.toString()
+                text = searchEditText.text.toString()
             }
         }
-        searchEdittext.addTextChangedListener(simpleTextWatcher)
+        searchEditText.addTextChangedListener(simpleTextWatcher)
     }
 
     private fun clearButtonVisibility(s: CharSequence?): Int {
@@ -68,6 +65,10 @@ class SearchActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         text = savedInstanceState.getString(MUSIC_SEARCH, "")
+    }
+
+    companion object {
+        const val MUSIC_SEARCH = "MUSIC_SEARCH"
     }
 
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/Theme.PlaylistMaker"
+    style="@style/MainScreenLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -26,20 +26,20 @@
 
         <Button
             android:id="@+id/search_button"
-            style="@style/ButtonStyle"
+            style="@style/MainScreenButtonStyle"
             android:text="@string/search_button"
             app:icon="@drawable/search_vector" />
 
         <Button
             android:id="@+id/media_button"
-            style="@style/ButtonStyle"
+            style="@style/MainScreenButtonStyle"
             android:layout_marginTop="@dimen/button_top_margin"
             android:text="@string/media_button"
             app:icon="@drawable/media_vector" />
 
         <Button
             android:id="@+id/settings_button"
-            style="@style/ButtonStyle"
+            style="@style/MainScreenButtonStyle"
             android:layout_marginTop="@dimen/button_top_margin"
             android:text="@string/settings_screen_title"
             app:icon="@drawable/settings_vector" />

@@ -16,10 +16,10 @@
             android:text="@string/search_screen_title" />
     </FrameLayout>
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="36dp"
-        android:layout_marginTop="48dp">
+        android:layout_marginTop="32dp">
 
         <EditText
             android:id="@+id/search_edittext"
@@ -39,12 +39,10 @@
             style="@style/searchClearButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/search_edittext"
-            android:layout_centerVertical="true"
+            android:layout_gravity="end|center_vertical"
             android:paddingEnd="14dp"
             android:src="@drawable/cross"
             android:visibility="gone" />
-    </RelativeLayout>
-
+    </FrameLayout>
 
 </LinearLayout>

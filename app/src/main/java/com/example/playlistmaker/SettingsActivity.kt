@@ -2,11 +2,10 @@ package com.example.playlistmaker
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.FrameLayout
 import android.widget.ImageButton
-
-
+import androidx.appcompat.app.AppCompatActivity
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,40 +13,45 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_settings)
 
         val backButton = findViewById<ImageButton>(R.id.back_button)
-        val shareAppButton = findViewById<ImageButton>(R.id.shareAppButton)
-        val contactSupportButton = findViewById<ImageButton>(R.id.contactSupportButton)
-        val userAgreementButton = findViewById<ImageButton>(R.id.UserAgreementButton)
+        //Вариант для реализации через кнопки
+//        val shareAppButton = findViewById<ImageButton>(R.id.shareAppButton)
+//        val contactSupportButton = findViewById<ImageButton>(R.id.contactSupportButton)
+//        val userAgreementButton = findViewById<ImageButton>(R.id.UserAgreementButton)
+
+        val shareAppLayout = findViewById<FrameLayout>(R.id.shareAppLayout)
+        val contactSupportLayout = findViewById<FrameLayout>(R.id.contactSupportLayout)
+        val userAgreementLayout = findViewById<FrameLayout>(R.id.userAgreementLayout)
 
 
         backButton.setOnClickListener {
             finish()
         }
 
-        shareAppButton.setOnClickListener {
+        shareAppLayout.setOnClickListener {
             val shareIntent = Intent(Intent.ACTION_SEND)
             shareIntent.setType("text/plain")
-            shareIntent.putExtra(Intent.EXTRA_TEXT, this.getString(R.string.android_course_url))
+            shareIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.android_course_url))
             startActivity(Intent.createChooser(shareIntent, "Share"))
         }
 
-        contactSupportButton.setOnClickListener {
+        contactSupportLayout.setOnClickListener {
             val supportIntent = Intent(Intent.ACTION_SENDTO)
             supportIntent.data = Uri.parse("mailto:")
-            supportIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("nikshg@outlook.com"))
             supportIntent.putExtra(
-                Intent.EXTRA_SUBJECT,
-                this.getString(R.string.contact_support_email_topic)
+                Intent.EXTRA_EMAIL,
+                arrayOf(getString(R.string.contact_support_email))
             )
             supportIntent.putExtra(
-                Intent.EXTRA_TEXT,
-                this.getString(R.string.contact_support_email_body)
+                Intent.EXTRA_SUBJECT, getString(R.string.contact_support_email_topic)
+            )
+            supportIntent.putExtra(
+                Intent.EXTRA_TEXT, getString(R.string.contact_support_email_body)
             )
             startActivity(supportIntent)
         }
-        userAgreementButton.setOnClickListener {
-            val agreementUrl = "https://yandex.ru/legal/practicum_offer/"
+        userAgreementLayout.setOnClickListener {
             val agreementIntent =
-                Intent(Intent.ACTION_VIEW, Uri.parse(this.getString(R.string.agreement_url)))
+                Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.agreement_url)))
             startActivity(agreementIntent)
         }
     }

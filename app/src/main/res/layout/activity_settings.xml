@@ -17,8 +17,9 @@
     </FrameLayout>
 
     <FrameLayout
-        style="@style/SettingFramelayoutStyle"
-        android:layout_marginTop="80dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp">
 
         <TextView
             style="@style/SettingsTextStyle"
@@ -27,7 +28,11 @@
         <Switch style="@style/SwitchSettingsStyle" />
     </FrameLayout>
 
-    <FrameLayout style="@style/SettingFramelayoutStyle">
+    <FrameLayout
+        android:id="@+id/shareAppLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/settings_menu_padding">
 
         <TextView
             style="@style/SettingsTextStyle"
@@ -40,7 +45,11 @@
             android:src="@drawable/shareapp_vector" />
     </FrameLayout>
 
-    <FrameLayout style="@style/SettingFramelayoutStyle">
+    <FrameLayout
+        android:id="@+id/contactSupportLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/settings_menu_padding">
 
         <TextView
             style="@style/SettingsTextStyle"
@@ -53,7 +62,11 @@
             android:src="@drawable/customer_support_vector" />
     </FrameLayout>
 
-    <FrameLayout style="@style/SettingFramelayoutStyle">
+    <FrameLayout
+        android:id="@+id/userAgreementLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/settings_menu_padding">
 
         <TextView
             style="@style/SettingsTextStyle"
